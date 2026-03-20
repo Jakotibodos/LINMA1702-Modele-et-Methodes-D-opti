@@ -1,0 +1,60 @@
+--------Valeurs---------
+F(t) = flux d'eau entrant (m^3/h)
+V(t) = volume d'eau en temps t (en m^3)
+T(t) = flux d'eau vers la turbine (en m^3/h)
+E(t) = puissance electrique genere (en MW)
+D(t) = eau vider sans produire (en m^3/h) 
+P(t) = prix du marche (en euro/MWh) (pour vente et achat)
+M(t) = eau pomper depuis l'aval (en m^3/h)
+S(t) = cout electrique de pomper (en MW)
+t ∈ [0,t_max], t_max = N (heures)
+V(0) = V_0 (volume initial)
+
+-E(t) et D(t) peuvent etre simultaneous
+
+-------Contraintes------
+V_min <= V(t) <= V_max
+T(t), D(t), M(t) <= T_max, D_max, M_max
+T(t) + D(t) >= TD_min
+|T'(t)| <= VT_max (derivative)
+|D'(t)| <= VD_max (derivative)
+V(t_max) = V_0
+
+
+------Questions--------
+1.1) Formuler modele lineraire
+    - Variables de decisions
+    - parametres
+    - Contraintes
+    - eventuelles hypothese de modelisation
+    - unites de differentes quantites
+
+1.2) function objectif
+
+1.3) Analyse qualitative des data fournies
+
+1.4) Implement in python using library
+
+1.5) Calcule solution optimale
+    - compare avec strategie sans pompage
+    - calcule le gain apporté par le pompage
+
+1.6) 
+    a) Comment, sans beaucoup de nouveaux calculs, 
+    peut-on évaluer l'impact de variation de:
+        - V_max
+        - T_max
+        - M_max
+        - VT_max
+        - ∆F_k
+        - ∆P_k
+    b) Calcule ces valeurs et interprete économiquement
+    Quels coûts seraient rentables
+    c) Montre que grosse variations, estimations sont inexactes.
+
+
+--------------Consignes----------------------
+Rapport 3 pages max 
+13 avril 2026 (lundi s11)
+Python code in Jupyter Notebook
+Analyses short
